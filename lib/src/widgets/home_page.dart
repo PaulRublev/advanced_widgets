@@ -1,19 +1,20 @@
 import 'package:advanced_widgets/src/widgets/weather.dart';
 import 'package:flutter/material.dart';
 
-import 'change_color_buttons.dart';
-import 'shadow.dart';
+import 'color_palette_button.dart';
+import 'custom_child_overlay.dart';
+import 'switch_color_button.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
+class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   double _currentSliderValue = 0.0;
   late AnimationController _animation;

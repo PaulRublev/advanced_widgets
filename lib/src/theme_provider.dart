@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'themes.dart';
+import 'custom_themes_data.dart';
 
 class ThemeProvider with ChangeNotifier {
   Themes _theme = Themes.dark;

@@ -8,16 +8,16 @@ class Weather extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      painter: WeatherPainter(weatherIndicator: weatherIndicator ?? 0.5),
+      painter: _WeatherPainter(weatherIndicator: weatherIndicator ?? 0.5),
       size: const Size(200, 200),
     );
   }
 }
 
-class WeatherPainter extends CustomPainter {
+class _WeatherPainter extends CustomPainter {
   final double weatherIndicator;
 
-  WeatherPainter({required this.weatherIndicator});
+  _WeatherPainter({required this.weatherIndicator});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -78,11 +78,11 @@ class WeatherPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(WeatherPainter oldDelegate) =>
+  bool shouldRepaint(_WeatherPainter oldDelegate) =>
       weatherIndicator == oldDelegate.weatherIndicator ? false : true;
 
   @override
-  bool shouldRebuildSemantics(WeatherPainter oldDelegate) => false;
+  bool shouldRebuildSemantics(_WeatherPainter oldDelegate) => false;
 }
 
 String getWeatherDescription(double sliderValue) {

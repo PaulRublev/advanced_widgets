@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 import '../theme_provider.dart';
 import 'home_page.dart';
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
+class App extends StatelessWidget {
+  App({super.key});
 
   final ThemeProvider themeChangeProvider = ThemeProvider();
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
             theme: provider.currentTheme(),
-            home: const MyHomePage(title: 'Weather'),
+            home: const HomePage(title: 'Weather'),
           );
         }),
       ),
